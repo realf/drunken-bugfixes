@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Sergey Dunets. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "DBFMainViewController.h"
 
-@interface ViewController ()
+@interface DBFMainViewController ()
 
 @end
 
-@implementation ViewController
+@implementation DBFMainViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

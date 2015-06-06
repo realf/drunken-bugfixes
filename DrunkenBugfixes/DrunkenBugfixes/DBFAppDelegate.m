@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Sergey Dunets. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "DBFAppDelegate.h"
 
-@interface AppDelegate ()
+@interface DBFAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation DBFAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

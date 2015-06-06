@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		469729E81B232BD700CBA667 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 469729E71B232BD700CBA667 /* main.m */; };
-		469729EB1B232BD700CBA667 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469729EA1B232BD700CBA667 /* AppDelegate.m */; };
+		469729EB1B232BD700CBA667 /* DBFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469729EA1B232BD700CBA667 /* DBFAppDelegate.m */; };
 		469729EE1B232BD700CBA667 /* DrunkenBugfixes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469729EC1B232BD700CBA667 /* DrunkenBugfixes.xcdatamodeld */; };
-		469729F11B232BD700CBA667 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469729F01B232BD700CBA667 /* ViewController.m */; };
+		469729F11B232BD700CBA667 /* DBFMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 469729F01B232BD700CBA667 /* DBFMainViewController.m */; };
 		469729F41B232BD700CBA667 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 469729F21B232BD700CBA667 /* Main.storyboard */; };
 		469729F61B232BD700CBA667 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469729F51B232BD700CBA667 /* Images.xcassets */; };
 		469729F91B232BD700CBA667 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469729F71B232BD700CBA667 /* LaunchScreen.xib */; };
@@ -31,11 +31,11 @@
 		469729E21B232BD700CBA667 /* DrunkenBugfixes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrunkenBugfixes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469729E61B232BD700CBA667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		469729E71B232BD700CBA667 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		469729E91B232BD700CBA667 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		469729EA1B232BD700CBA667 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		469729E91B232BD700CBA667 /* DBFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBFAppDelegate.h; sourceTree = "<group>"; };
+		469729EA1B232BD700CBA667 /* DBFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBFAppDelegate.m; sourceTree = "<group>"; };
 		469729ED1B232BD700CBA667 /* DrunkenBugfixes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DrunkenBugfixes.xcdatamodel; sourceTree = "<group>"; };
-		469729EF1B232BD700CBA667 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		469729F01B232BD700CBA667 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		469729EF1B232BD700CBA667 /* DBFMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBFMainViewController.h; sourceTree = "<group>"; };
+		469729F01B232BD700CBA667 /* DBFMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBFMainViewController.m; sourceTree = "<group>"; };
 		469729F31B232BD700CBA667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		469729F51B232BD700CBA667 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		469729F81B232BD700CBA667 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -83,10 +83,10 @@
 		469729E41B232BD700CBA667 /* DrunkenBugfixes */ = {
 			isa = PBXGroup;
 			children = (
-				469729E91B232BD700CBA667 /* AppDelegate.h */,
-				469729EA1B232BD700CBA667 /* AppDelegate.m */,
-				469729EF1B232BD700CBA667 /* ViewController.h */,
-				469729F01B232BD700CBA667 /* ViewController.m */,
+				469729E91B232BD700CBA667 /* DBFAppDelegate.h */,
+				469729EA1B232BD700CBA667 /* DBFAppDelegate.m */,
+				469729EF1B232BD700CBA667 /* DBFMainViewController.h */,
+				469729F01B232BD700CBA667 /* DBFMainViewController.m */,
 				469729F21B232BD700CBA667 /* Main.storyboard */,
 				469729F51B232BD700CBA667 /* Images.xcassets */,
 				469729F71B232BD700CBA667 /* LaunchScreen.xib */,
@@ -223,8 +223,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				469729EE1B232BD700CBA667 /* DrunkenBugfixes.xcdatamodeld in Sources */,
-				469729EB1B232BD700CBA667 /* AppDelegate.m in Sources */,
-				469729F11B232BD700CBA667 /* ViewController.m in Sources */,
+				469729EB1B232BD700CBA667 /* DBFAppDelegate.m in Sources */,
+				469729F11B232BD700CBA667 /* DBFMainViewController.m in Sources */,
 				469729E81B232BD700CBA667 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
