@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		469434D31B2DFB9B00717AD2 /* DBFPermissionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 469434D21B2DFB9B00717AD2 /* DBFPermissionsManager.m */; };
 		469729E81B232BD700CBA667 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 469729E71B232BD700CBA667 /* main.m */; };
 		469729EB1B232BD700CBA667 /* DBFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469729EA1B232BD700CBA667 /* DBFAppDelegate.m */; };
 		469729EE1B232BD700CBA667 /* DrunkenBugfixes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 469729EC1B232BD700CBA667 /* DrunkenBugfixes.xcdatamodeld */; };
@@ -15,6 +16,7 @@
 		469729F61B232BD700CBA667 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 469729F51B232BD700CBA667 /* Images.xcassets */; };
 		469729F91B232BD700CBA667 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 469729F71B232BD700CBA667 /* LaunchScreen.xib */; };
 		46972A051B232BD700CBA667 /* DrunkenBugfixesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 46972A041B232BD700CBA667 /* DrunkenBugfixesTests.m */; };
+		46DC0B1A1B2E28A100073ADB /* DBFVideoCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46DC0B191B2E28A100073ADB /* DBFVideoCaptureViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		469434D11B2DFB9B00717AD2 /* DBFPermissionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBFPermissionsManager.h; path = Utilities/DBFPermissionsManager.h; sourceTree = "<group>"; };
+		469434D21B2DFB9B00717AD2 /* DBFPermissionsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBFPermissionsManager.m; path = Utilities/DBFPermissionsManager.m; sourceTree = "<group>"; };
 		469729E21B232BD700CBA667 /* DrunkenBugfixes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrunkenBugfixes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		469729E61B232BD700CBA667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		469729E71B232BD700CBA667 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -42,6 +46,8 @@
 		469729FE1B232BD700CBA667 /* DrunkenBugfixesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DrunkenBugfixesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46972A031B232BD700CBA667 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46972A041B232BD700CBA667 /* DrunkenBugfixesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrunkenBugfixesTests.m; sourceTree = "<group>"; };
+		46DC0B181B2E28A100073ADB /* DBFVideoCaptureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBFVideoCaptureViewController.h; sourceTree = "<group>"; };
+		46DC0B191B2E28A100073ADB /* DBFVideoCaptureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBFVideoCaptureViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		469434D41B2DFBA900717AD2 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				469434D11B2DFB9B00717AD2 /* DBFPermissionsManager.h */,
+				469434D21B2DFB9B00717AD2 /* DBFPermissionsManager.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
 		469729D91B232BD700CBA667 = {
 			isa = PBXGroup;
 			children = (
@@ -83,10 +98,13 @@
 		469729E41B232BD700CBA667 /* DrunkenBugfixes */ = {
 			isa = PBXGroup;
 			children = (
+				469434D41B2DFBA900717AD2 /* Utilities */,
 				469729E91B232BD700CBA667 /* DBFAppDelegate.h */,
 				469729EA1B232BD700CBA667 /* DBFAppDelegate.m */,
 				469729EF1B232BD700CBA667 /* DBFMainViewController.h */,
 				469729F01B232BD700CBA667 /* DBFMainViewController.m */,
+				46DC0B181B2E28A100073ADB /* DBFVideoCaptureViewController.h */,
+				46DC0B191B2E28A100073ADB /* DBFVideoCaptureViewController.m */,
 				469729F21B232BD700CBA667 /* Main.storyboard */,
 				469729F51B232BD700CBA667 /* Images.xcassets */,
 				469729F71B232BD700CBA667 /* LaunchScreen.xib */,
@@ -225,6 +243,8 @@
 				469729EE1B232BD700CBA667 /* DrunkenBugfixes.xcdatamodeld in Sources */,
 				469729EB1B232BD700CBA667 /* DBFAppDelegate.m in Sources */,
 				469729F11B232BD700CBA667 /* DBFMainViewController.m in Sources */,
+				469434D31B2DFB9B00717AD2 /* DBFPermissionsManager.m in Sources */,
+				46DC0B1A1B2E28A100073ADB /* DBFVideoCaptureViewController.m in Sources */,
 				469729E81B232BD700CBA667 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,6 +438,7 @@
 				46972A0A1B232BD700CBA667 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46972A0B1B232BD700CBA667 /* Build configuration list for PBXNativeTarget "DrunkenBugfixesTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +447,7 @@
 				46972A0D1B232BD700CBA667 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
