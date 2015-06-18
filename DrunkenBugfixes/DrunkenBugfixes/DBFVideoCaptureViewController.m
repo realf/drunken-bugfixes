@@ -7,7 +7,7 @@
 //
 
 #import "DBFVideoCaptureViewController.h"
-
+#import "DBFCaptureSessionMovieFileOutputManager.h"
 #import "DBFPermissionsManager.h"
 
 typedef NS_ENUM(NSInteger, DBFAlertType) {
@@ -15,9 +15,10 @@ typedef NS_ENUM(NSInteger, DBFAlertType) {
     DBFAlertTypeMicAccessDenied,
 };
 
-@interface DBFVideoCaptureViewController ()
+@interface DBFVideoCaptureViewController () <DBFCaptureSessionManagerDelegate>
 
 @property (nonatomic) BOOL recorging;
+@property (nonatomic, retain) DBFCaptureSessionManager *captureSessionManager;
 
 @end
 
@@ -38,6 +39,9 @@ typedef NS_ENUM(NSInteger, DBFAlertType) {
 
 - (void)setup {
     [self checkPermissions];
+    _captureSessionManager = [DBFCaptureSessionMovieFileOutputManager new];
+    [_captureSessionManager setDelegate:self callbackQueue:dispatch_get_main_queue()];
+    
     [self setupInterface];
 }
 
@@ -63,7 +67,11 @@ typedef NS_ENUM(NSInteger, DBFAlertType) {
 }
 
 - (void)setupInterface {
+    AVCaptureVideoPreviewLayer *previewLayer = _captureSessionManager.videoPreviewLayer;
+    previewLayer.frame = self.view.bounds;
+    [self.view.layer addSublayer:previewLayer];
     
+    [_captureSessionManager startRunning];
 }
 
 - (void)showAlert:(DBFAlertType)type {
@@ -94,6 +102,17 @@ typedef NS_ENUM(NSInteger, DBFAlertType) {
     
     [self presentViewController:alertController animated:YES completion:nil];
 }
+
+#pragma mark - DBFCaptureSessionManagerDelegate
+
+- (void)managerDidBeginRecording:(DBFCaptureSessionManager *)manager {
+    
+}
+
+- (void)manager:(DBFCaptureSessionManager *)manager didFinishRecordingToFileURL:(NSURL *)fileURL error:(NSError *)error {
+    
+}
+
 
 /*
 #pragma mark - Navigation

@@ -64,11 +64,16 @@
 }
 
 - (void)startRunning {
-    
+    dispatch_async(_sessionQueue, ^{
+        [_captureSession startRunning];
+    });
 }
 
 - (void)stopRunning {
-    
+    dispatch_async(_sessionQueue, ^{
+        [self stopRecording];
+        [_captureSession stopRunning];
+    });
 }
 
 - (void)startRecording {
@@ -80,9 +85,12 @@
 }
 
 - (AVCaptureVideoPreviewLayer *)videoPreviewLayer {
+    if (_previewLayer == nil && _captureSession != nil) {
+        _previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:_captureSession];
+    }
     
+    return _previewLayer;
 }
-
 
 #pragma mark - Capture Session
 
