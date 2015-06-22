@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DBFMainViewController : UIViewController
-
+@interface DBFMainViewController : UITableViewController
 
 @end
 
