@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Select action-->
         <scene sceneID="hG9-Xi-YcB">
             <objects>
                 <tableViewController id="k1f-rR-sPN" customClass="DBFMainViewController" sceneMemberID="viewController">
@@ -15,7 +15,7 @@
                         <sections>
                             <tableViewSection id="Hew-Uy-ZC6">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RootCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="RootCell" textLabel="Jbt-yZ-d3X" style="IBUITableViewCellStyleDefault" id="uQW-EO-d7u">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="RootCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RootCell" textLabel="Jbt-yZ-d3X" style="IBUITableViewCellStyleDefault" id="uQW-EO-d7u">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uQW-EO-d7u" id="VFO-jd-thd">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -37,23 +37,26 @@
                             <outlet property="delegate" destination="k1f-rR-sPN" id="kTg-Ub-swk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="v2R-Rz-p7D"/>
+                    <navigationItem key="navigationItem" title="Select action" id="v2R-Rz-p7D"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="CaptureVideoSegueId" id="64K-Fd-GMe"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eT0-Df-l6v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="126" y="-68"/>
+            <point key="canvasLocation" x="-100" y="-68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x4s-0d-84J">
             <objects>
-                <navigationController id="O8w-f5-dCa" sceneMemberID="viewController">
+                <navigationController toolbarHidden="NO" id="O8w-f5-dCa" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="RBH-g0-EeV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="w3C-H9-puP">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="k1f-rR-sPN" kind="relationship" relationship="rootViewController" id="qJV-fk-8yb"/>
                     </connections>
@@ -73,18 +76,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rgV-Wi-O6z">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bMf-th-VAl"/>
-                                    <barButtonItem title="Record" id="Iys-cV-tQm"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="sD6-tH-PKq"/>
-                                </items>
-                            </toolbar>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="R2Z-Mm-MzA"/>
+                        <barButtonItem title="Record" id="PSv-cG-er4">
+                            <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="toggleRecording:" destination="BYZ-38-t0r" id="aUt-KU-sWI"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="I5k-TU-Tc4"/>
+                    </toolbarItems>
+                    <connections>
+                        <outlet property="recordButton" destination="PSv-cG-er4" id="61d-xw-eT9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

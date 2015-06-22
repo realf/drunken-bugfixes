@@ -38,7 +38,11 @@
 - (void)startRecording {
     DBFFileManager *fileManager = [DBFFileManager new];
     NSURL *fileURL = [fileManager tempFileURL];
-    [self.movieFileOutput startRecordingToOutputFileURL:fileURL recordingDelegate:self];
+    [_movieFileOutput startRecordingToOutputFileURL:fileURL recordingDelegate:self];
+}
+
+- (void)stopRecording {
+    [_movieFileOutput stopRecording];
 }
 
 #pragma mark - AVCaptureFileOutputRecordingDelegate

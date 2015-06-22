@@ -11,5 +11,6 @@
 @interface DBFFileManager : NSObject
 
 - (NSURL *)tempFileURL;
+- (void)copyFileToCameraRoll:(NSURL *)fileURL;
 
 @end

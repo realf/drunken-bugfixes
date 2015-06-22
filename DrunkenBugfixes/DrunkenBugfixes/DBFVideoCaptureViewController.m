@@ -9,6 +9,7 @@
 #import "DBFVideoCaptureViewController.h"
 #import "DBFCaptureSessionMovieFileOutputManager.h"
 #import "DBFPermissionsManager.h"
+#import "DBFFileManager.h"
 
 typedef NS_ENUM(NSInteger, DBFAlertType) {
     DBFAlertTypeCameraAccessDenied,
@@ -17,8 +18,10 @@ typedef NS_ENUM(NSInteger, DBFAlertType) {
 
 @interface DBFVideoCaptureViewController () <DBFCaptureSessionManagerDelegate>
 
-@property (nonatomic) BOOL recorging;
+@property (nonatomic) BOOL recording;
+@property (nonatomic) BOOL dismissing;
 @property (nonatomic, retain) DBFCaptureSessionManager *captureSessionManager;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *recordButton;
 
 @end
 
@@ -35,6 +38,28 @@ typedef NS_ENUM(NSInteger, DBFAlertType) {
 }
 
 - (IBAction)toggleRecording:(id)sender {
+    if (_recording) {
+        [_captureSessionManager stopRecording];
+    }
+    else {
+        [UIApplication sharedApplication].idleTimerDisabled = YES;
+        
+        self.recordButton.enabled = NO;
+        self.recordButton.title = @"Stop";
+        
+        [self.captureSessionManager startRecording];
+        
+        _recording = YES;
+    }
+}
+
+- (IBAction)closeCamera:(id)sender {
+    if(_recording){
+        _dismissing = YES;
+        [_captureSessionManager stopRecording];
+    } else {
+        [self stopRecordingAndClose];
+    }
 }
 
 - (void)setup {
@@ -71,7 +96,16 @@ typedef NS_ENUM(NSInteger, DBFAlertType) {
     previewLayer.frame = self.view.bounds;
     [self.view.layer addSublayer:previewLayer];
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Close" style:UIBarButtonItemStylePlain target:self action:@selector(closeCamera:)];
+    self.navigationController.navigationItem.hidesBackButton = YES;
+    
     [_captureSessionManager startRunning];
+}
+
+- (void)stopRecordingAndClose {
+    [_captureSessionManager stopRunning];
+    [self.navigationController popToRootViewControllerAnimated:YES];
+    _dismissing = NO;
 }
 
 - (void)showAlert:(DBFAlertType)type {
@@ -106,11 +140,22 @@ typedef NS_ENUM(NSInteger, DBFAlertType) {
 #pragma mark - DBFCaptureSessionManagerDelegate
 
 - (void)managerDidBeginRecording:(DBFCaptureSessionManager *)manager {
-    
+    _recordButton.enabled = YES;
 }
 
 - (void)manager:(DBFCaptureSessionManager *)manager didFinishRecordingToFileURL:(NSURL *)fileURL error:(NSError *)error {
+    [UIApplication sharedApplication].idleTimerDisabled = NO;
     
+    _recordButton.title = @"Record";
+    _recording = NO;
+    
+    DBFFileManager *fm = [DBFFileManager new];
+    [fm copyFileToCameraRoll:fileURL];
+    
+    //Dismiss camera (when user taps cancel while camera is recording)
+    if (_dismissing) {
+        [self stopRecordingAndClose];
+    }
 }
 
 
