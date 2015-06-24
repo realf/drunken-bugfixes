@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4687DEB71B3A93F100308062 /* GTMHTTPFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 4687DEAF1B3A93F100308062 /* GTMHTTPFetcher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4687DEB81B3A93F100308062 /* GTMOAuth2Authentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 4687DEB11B3A93F100308062 /* GTMOAuth2Authentication.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4687DEB91B3A93F100308062 /* GTMOAuth2SignIn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4687DEB31B3A93F100308062 /* GTMOAuth2SignIn.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4687DEBA1B3A93F100308062 /* GTMOAuth2ViewControllerTouch.m in Sources */ = {isa = PBXBuildFile; fileRef = 4687DEB51B3A93F100308062 /* GTMOAuth2ViewControllerTouch.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4687DEBB1B3A93F100308062 /* GTMOAuth2ViewTouch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4687DEB61B3A93F100308062 /* GTMOAuth2ViewTouch.xib */; };
 		469434D31B2DFB9B00717AD2 /* DBFPermissionsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 469434D21B2DFB9B00717AD2 /* DBFPermissionsManager.m */; };
 		469729E81B232BD700CBA667 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 469729E71B232BD700CBA667 /* main.m */; };
 		469729EB1B232BD700CBA667 /* DBFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 469729EA1B232BD700CBA667 /* DBFAppDelegate.m */; };
@@ -33,6 +38,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4687DEAE1B3A93F100308062 /* GTMHTTPFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMHTTPFetcher.h; sourceTree = "<group>"; };
+		4687DEAF1B3A93F100308062 /* GTMHTTPFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMHTTPFetcher.m; sourceTree = "<group>"; };
+		4687DEB01B3A93F100308062 /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2Authentication.h; sourceTree = "<group>"; };
+		4687DEB11B3A93F100308062 /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2Authentication.m; sourceTree = "<group>"; };
+		4687DEB21B3A93F100308062 /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2SignIn.h; sourceTree = "<group>"; };
+		4687DEB31B3A93F100308062 /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		4687DEB41B3A93F100308062 /* GTMOAuth2ViewControllerTouch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMOAuth2ViewControllerTouch.h; sourceTree = "<group>"; };
+		4687DEB51B3A93F100308062 /* GTMOAuth2ViewControllerTouch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GTMOAuth2ViewControllerTouch.m; sourceTree = "<group>"; };
+		4687DEB61B3A93F100308062 /* GTMOAuth2ViewTouch.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GTMOAuth2ViewTouch.xib; sourceTree = "<group>"; };
 		469434D11B2DFB9B00717AD2 /* DBFPermissionsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DBFPermissionsManager.h; path = Utilities/DBFPermissionsManager.h; sourceTree = "<group>"; };
 		469434D21B2DFB9B00717AD2 /* DBFPermissionsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DBFPermissionsManager.m; path = Utilities/DBFPermissionsManager.m; sourceTree = "<group>"; };
 		469729E21B232BD700CBA667 /* DrunkenBugfixes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrunkenBugfixes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +91,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4687DEAC1B3A93F100308062 /* 3rdParties */ = {
+			isa = PBXGroup;
+			children = (
+				4687DEAD1B3A93F100308062 /* GTMOAuth2 */,
+			);
+			path = 3rdParties;
+			sourceTree = "<group>";
+		};
+		4687DEAD1B3A93F100308062 /* GTMOAuth2 */ = {
+			isa = PBXGroup;
+			children = (
+				4687DEAE1B3A93F100308062 /* GTMHTTPFetcher.h */,
+				4687DEAF1B3A93F100308062 /* GTMHTTPFetcher.m */,
+				4687DEB01B3A93F100308062 /* GTMOAuth2Authentication.h */,
+				4687DEB11B3A93F100308062 /* GTMOAuth2Authentication.m */,
+				4687DEB21B3A93F100308062 /* GTMOAuth2SignIn.h */,
+				4687DEB31B3A93F100308062 /* GTMOAuth2SignIn.m */,
+				4687DEB41B3A93F100308062 /* GTMOAuth2ViewControllerTouch.h */,
+				4687DEB51B3A93F100308062 /* GTMOAuth2ViewControllerTouch.m */,
+				4687DEB61B3A93F100308062 /* GTMOAuth2ViewTouch.xib */,
+			);
+			path = GTMOAuth2;
+			sourceTree = "<group>";
+		};
 		469434D41B2DFBA900717AD2 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +147,7 @@
 		469729E41B232BD700CBA667 /* DrunkenBugfixes */ = {
 			isa = PBXGroup;
 			children = (
+				4687DEAC1B3A93F100308062 /* 3rdParties */,
 				46DC0B1B1B2E306300073ADB /* AVFoundation */,
 				469434D41B2DFBA900717AD2 /* Utilities */,
 				469729E91B232BD700CBA667 /* DBFAppDelegate.h */,
@@ -243,6 +282,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4687DEBB1B3A93F100308062 /* GTMOAuth2ViewTouch.xib in Resources */,
 				469729F41B232BD700CBA667 /* Main.storyboard in Resources */,
 				469729F91B232BD700CBA667 /* LaunchScreen.xib in Resources */,
 				469729F61B232BD700CBA667 /* Images.xcassets in Resources */,
@@ -263,11 +303,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4687DEBA1B3A93F100308062 /* GTMOAuth2ViewControllerTouch.m in Sources */,
 				469729EE1B232BD700CBA667 /* DrunkenBugfixes.xcdatamodeld in Sources */,
 				469729EB1B232BD700CBA667 /* DBFAppDelegate.m in Sources */,
 				469729F11B232BD700CBA667 /* DBFMainViewController.m in Sources */,
 				469434D31B2DFB9B00717AD2 /* DBFPermissionsManager.m in Sources */,
+				4687DEB81B3A93F100308062 /* GTMOAuth2Authentication.m in Sources */,
+				4687DEB71B3A93F100308062 /* GTMHTTPFetcher.m in Sources */,
 				46BDAA441B32A26500162725 /* DBFCaptureSessionMovieFileOutputManager.m in Sources */,
+				4687DEB91B3A93F100308062 /* GTMOAuth2SignIn.m in Sources */,
 				46DC0B1A1B2E28A100073ADB /* DBFVideoCaptureViewController.m in Sources */,
 				46DC0B1E1B2E30BB00073ADB /* DBFCaptureSessionManager.m in Sources */,
 				46BDAA471B32A44000162725 /* DBFFileManager.m in Sources */,
